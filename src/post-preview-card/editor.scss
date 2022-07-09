@@ -1,0 +1,49 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-cleanfairfax-post-preview-card {
+    background-color: #f3f3f4;
+    border-radius: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.wp-block-cleanfairfax-post-preview-card {
+    padding-top: 25px;
+    padding-bottom: 20px;
+    padding-left: 22px;
+    padding-right: 22px;
+}
+
+.wp-block-cleanfairfax-post-preview-card input {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 14px;
+}
+
+.wp-block-cleanfairfax-post-preview-card label {
+    color: black;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.wp-block-cleanfairfax-post-preview-card header {
+    color: black;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.wp-block-cleanfairfax-post-preview-card .image-container {
+    margin-right: 2rem;
+    margin-top: 1rem;
+}
+
+.wp-block-cleanfairfax-post-preview-card .excerpt-text {
+    --tw-text-opacity: 1;
+    color: rgb(75 85 99 / var(--tw-text-opacity));
+    margin-top: -0.5rem;
+    display: inline-block;
+}

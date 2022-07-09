@@ -28,13 +28,31 @@ function cleanfairfax_blocks_init() {
 			'render_callback' => 'cleanfairfax_get_category_posts_render'
 		]
 	);
+
+	register_block_type(
+		__DIR__ . '/build/post-preview-card',
+		[
+			'render_callback' => 'cleanfairfax_post_preview_card_render'
+		]
+	);
 }
 add_action('init', 'cleanfairfax_blocks_init');
 
-function cleanfairfax_get_category_posts_render() {
+function cleanfairfax_get_category_posts_render($attributes) {
 	ob_start();
 
 	include(__DIR__ . '/templates/get-category-posts.php');
+
+	$output = ob_get_clean();
+
+	return $output;
+}
+
+
+function cleanfairfax_post_preview_card_render($attributes) {
+	ob_start();
+
+	include(__DIR__ . '/templates/post-preview-card.php');
 
 	$output = ob_get_clean();
 
