@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "cleanfairfax/get-category-posts",
+  "version": "0.1.0",
+  "title": "Get Category Posts",
+  "category": "widgets",
+  "icon": "tagcloud",
+  "description": "Display a set number of posts from a specified category",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "get-category-posts",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

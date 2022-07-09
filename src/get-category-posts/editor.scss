@@ -1,0 +1,37 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-cleanfairfax-get-category-posts {
+	background-color: #f3f3f4;
+	border-radius: 0.5rem;
+}
+
+.wp-block-cleanfairfax-get-category-posts {
+	padding-top: 25px;
+	padding-bottom: 20px;
+	padding-left: 22px;
+	padding-right: 22px;
+}
+
+.wp-block-cleanfairfax-get-category-posts input {
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 14px;
+}
+
+.wp-block-cleanfairfax-get-category-posts label {
+	color: black;
+	font-weight: 500;
+	font-size: 13px;
+	text-transform: capitalize;
+}
+
+.wp-block-cleanfairfax-get-category-posts header {
+	color: black;
+	font-size: 1.2rem;
+	margin-bottom: 0.5rem;
+	font-weight: bold;
+}
