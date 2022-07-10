@@ -21,6 +21,19 @@
  *
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
+
+function cleanfairfax_block_category($categories) {
+	return array_merge(
+		$categories,
+		[
+			[
+				'slug'  => 'clean-fairfax',
+				'title' => __('Clean Fairfax', 'clean-fairfax-domain'),
+			],
+		]
+	);
+}
+add_action('block_categories', 'cleanfairfax_block_category', 10, 2);
 function cleanfairfax_blocks_init() {
 	register_block_type(
 		__DIR__ . '/build/get-category-posts',
@@ -33,6 +46,13 @@ function cleanfairfax_blocks_init() {
 		__DIR__ . '/build/post-preview-card',
 		[
 			'render_callback' => 'cleanfairfax_post_preview_card_render'
+		]
+	);
+
+	register_block_type(
+		__DIR__ . '/build/link-preview-card',
+		[
+			'render_callback' => 'cleanfairfax_link_preview_card_render'
 		]
 	);
 }
@@ -53,6 +73,16 @@ function cleanfairfax_post_preview_card_render($attributes) {
 	ob_start();
 
 	include(__DIR__ . '/templates/post-preview-card.php');
+
+	$output = ob_get_clean();
+
+	return $output;
+}
+
+function cleanfairfax_link_preview_card_render($attributes) {
+	ob_start();
+
+	include(__DIR__ . '/templates/link-preview-card.php');
 
 	$output = ob_get_clean();
 
