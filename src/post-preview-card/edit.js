@@ -48,7 +48,6 @@ export default function Edit({ attributes, setAttributes }) {
 			<div class="mt-6 border-t border-gray-300 pt-6">
 				{posts.map((post) => (
 					<div class="flex">
-						{console.log(post)}
 						<div class="image-container">
 							<img src={post._embedded['wp:featuredmedia'][0]['source_url']}></img>
 						</div>
