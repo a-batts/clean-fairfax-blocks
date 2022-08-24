@@ -55,6 +55,13 @@ function cleanfairfax_blocks_init() {
 			'render_callback' => 'cleanfairfax_link_preview_card_render'
 		]
 	);
+
+	register_block_type(
+		__DIR__ . '/build/inline-banner',
+		[
+			'render_callback' => 'cleanfairfax_inline_banner_render'
+		]
+	);
 }
 add_action('init', 'cleanfairfax_blocks_init');
 
@@ -83,6 +90,16 @@ function cleanfairfax_link_preview_card_render($attributes) {
 	ob_start();
 
 	include(__DIR__ . '/templates/link-preview-card.php');
+
+	$output = ob_get_clean();
+
+	return $output;
+}
+
+function cleanfairfax_inline_banner_render($attributes) {
+	ob_start();
+
+	include(__DIR__ . '/templates/inline-banner.php');
 
 	$output = ob_get_clean();
 

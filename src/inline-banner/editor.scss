@@ -1,0 +1,25 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-cleanfairfax-inline-banner {
+	@apply rounded-xl;
+}
+
+.wp-block-cleanfairfax-inline-banner .flex-container {
+	@apply px-3 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8 flex w-full;
+}
+
+.wp-block-cleanfairfax-inline-banner .text-container>p {
+	@apply text-lg font-semibold truncate m-0;
+}
+
+.wp-block-cleanfairfax-inline-banner .text-container {
+	@apply flex-grow flex items-center;
+}
+
+.wp-block-cleanfairfax-inline-banner .button-container .button {
+	@apply flex items-center justify-center px-4 py-2 text-sm font-medium text-black bg-white border border-transparent rounded-md shadow-sm hover:bg-indigo-50;
+}
