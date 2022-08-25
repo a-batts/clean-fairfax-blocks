@@ -11,7 +11,7 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
  */
-import { useBlockProps, RichText, InspectorControls } from '@wordpress/block-editor';
+import { useBlockProps, RichText, InspectorControls, PanelColorSettings } from '@wordpress/block-editor';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -23,7 +23,11 @@ import './editor.scss';
 
 import { Fragment } from '@wordpress/element';
 
-import { ColorPicker, PanelBody, PanelRow, TextControl } from '@wordpress/components';
+import { PanelBody, PanelRow, TextControl } from '@wordpress/components';
+
+import { useSelect } from '@wordpress/data';
+
+var defaultColors = require('../../colors.json');
 
 /**
  * The edit function describes the structure of your block in the context of the
@@ -36,30 +40,33 @@ import { ColorPicker, PanelBody, PanelRow, TextControl } from '@wordpress/compon
 export default function Edit(props) {
 	const { attributes, setAttributes } = props;
 
+	const theme = useSelect('core/block-editor').getSettings().colors;
+
+	const colors = [...theme,
+	...defaultColors
+	];
+
 	return (
 		<Fragment>
 			<InspectorControls>
-				<PanelBody title={__('Styling')}>
-					<PanelRow>Background color</PanelRow>
-					<PanelRow>
-						<ColorPicker
-							color={attributes.background_color}
-							onChange={(newVal) => setAttributes({ background_color: newVal })}
-							enableAlpha
-							defaultValue="#000"
-						/>
-					</PanelRow>
-					<PanelRow>Text color</PanelRow>
-					<PanelRow>
-						<ColorPicker
-							color={attributes.text_color}
-							onChange={(newVal) => setAttributes({ text_color: newVal })}
-							enableAlpha
-							defaultValue="#FFF"
-						/>
-					</PanelRow>
-				</PanelBody>
-				<PanelBody title={__('Link')}>
+				<PanelColorSettings
+					title={__('Color')}
+					colorSettings={[
+						{
+							value: attributes.background_color,
+							onChange: (newVal) => setAttributes({ background_color: newVal }),
+							label: __('Background color'),
+							colors: colors
+						},
+						{
+							value: attributes.text_color,
+							onChange: (newVal) => setAttributes({ text_color: newVal }),
+							label: __('Text color'),
+							colors: colors
+						},
+					]}
+				/>
+				<PanelBody title={__('Link')} opened={true}>
 					<PanelRow>Link</PanelRow>
 					<PanelRow>
 						<TextControl

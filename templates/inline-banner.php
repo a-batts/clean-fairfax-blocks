@@ -1,6 +1,6 @@
 <div class="rounded-xl" style="background-color: <?php echo $attributes['background_color'] ?? '#000' ?>; color: <?php echo $attributes['text_color'] ?? '#FFF' ?>">
-    <div class="flex w-full px-3 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
-        <div class="flex items-center flex-grow">
+    <div class="flex flex-wrap justify-center w-full px-5 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8 md:justify-start gap-y-3 gap-x-4">
+        <div class="flex items-center justify-center flex-grow md:justify-start">
             <span class="inline-block m-0 text-lg font-semibold truncate"><?php echo $attributes['text'] ?></span>
         </div>
         <?php if (!empty($attributes['link']) && !empty($attributes['link_title'])) : ?>
