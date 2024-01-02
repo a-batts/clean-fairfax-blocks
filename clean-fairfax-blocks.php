@@ -62,6 +62,10 @@ function cleanfairfax_blocks_init() {
 			'render_callback' => 'cleanfairfax_inline_banner_render'
 		]
 	);
+
+	register_block_type(
+		__DIR__ . '/build/recycling-instructions'
+	);
 }
 add_action('init', 'cleanfairfax_blocks_init');
 
