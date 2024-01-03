@@ -21,7 +21,7 @@ export default function Save({ attributes }) {
 				className="recycling-instructions-wrapper h-full rounded-lg shadow-md"
 				data-attributes={JSON.stringify(attributes)}
 			>
-				<div className="pt-6 pb-5 px-7 my-4">
+				<div className="pt-6 pb-5 px-7 my-6">
 					<h2>How Do I Recycle...?</h2>
 					<div className="flex gap-6 pt-6">
 						<div className="flex-1">

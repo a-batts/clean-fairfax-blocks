@@ -19,7 +19,7 @@ export default class RecyclingInstructions extends Component {
 		return (
 			<div>
 				<div className="recycling-instructions-wrapper h-full rounded-lg shadow-md">
-					<div className="pt-6 pb-5 px-7 my-4">
+					<div className="pt-6 pb-5 px-7 my-6">
 						<h2>How Do I Recycle...?</h2>
 						<div className="flex gap-6 pt-6">
 							<div className="flex-1">
@@ -37,7 +37,7 @@ export default class RecyclingInstructions extends Component {
 									))}
 								</select>
 							</div>
-							<div className="flex-1 min-h-[6rem]">
+							<div className="flex-1 min-h-[6.5rem]">
 								<p>
 									{this.state.selectedItem &&
 										this.state.selectedItem.description}
