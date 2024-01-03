@@ -21,6 +21,10 @@ export default class RecyclingInstructions extends Component {
 				<div className="recycling-instructions-wrapper h-full rounded-lg shadow-md">
 					<div className="pt-6 pb-5 px-7 my-6">
 						<h2>How Do I Recycle...?</h2>
+						<label className="text-base">
+							For items that cannot go in most curbside collection bins, refer
+							to the menu below to learn how to recycle properly.
+						</label>
 						<div className="flex gap-6 pt-6">
 							<div className="flex-1">
 								<select
