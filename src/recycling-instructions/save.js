@@ -18,7 +18,10 @@ export default function Save({ attributes }) {
 
 	return (
 		<div {...useBlockProps.save()}>
-			<div className="recycling-instructions-wrapper h-full rounded-lg shadow-md">
+			<div
+				className="recycling-instructions-wrapper h-full rounded-lg shadow-md"
+				data-attributes={JSON.stringify(attributes)}
+			>
 				<div className="pt-6 pb-5 px-7 my-4">
 					<h2>How Do I Recycle...?</h2>
 					<div className="flex gap-4 pt-6">
