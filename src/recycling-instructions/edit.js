@@ -75,7 +75,7 @@ export default function Edit(props) {
 	return (
 		<div {...useBlockProps()}>
 			<header className="title">Recycling Instructions</header>
-			<label>{__("Items", "category-posts-plugin")}</label>
+			<h2 className="items-header">{__("Items", "category-posts-plugin")}</h2>
 			{items.map((item, index) => (
 				<div className="item">
 					<div className="details">

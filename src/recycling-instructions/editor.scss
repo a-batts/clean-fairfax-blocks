@@ -39,7 +39,7 @@
 
 			h4 {
 				margin: 0;
-				font-weight: 600;
+				font-weight: 500;
 			}
 
 			p {
@@ -53,5 +53,11 @@
 
 	.new-item {
 		padding: 0.5rem 0;
+	}
+
+	.items-header {
+		padding: 0.5rem 0;
+		font-weight: 600;
+		font-size: 0.9em;
 	}
 }
