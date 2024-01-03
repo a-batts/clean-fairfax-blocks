@@ -1,0 +1,18 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "cleanfairfax/recycling-instructions",
+	"version": "0.1.0",
+	"title": "Recycling Instructions",
+	"category": "widgets",
+	"icon": "tagcloud",
+	"description": "Displays a component that shows recycling instructions for many different items",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "recycling-instructions",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"script": "file:./client.js"
+}

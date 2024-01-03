@@ -1,0 +1,75 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+// Breakpoint sm:
+@media (min-width: 640px) {
+	.post-container {
+		column-gap: 20px;
+		column-count: 2;
+	}
+}
+
+.title-link {
+	font-size: 1.3rem;
+	line-height: initial;
+	font-weight: 700;
+	color: black;
+}
+
+:hover.title-link {
+	text-decoration: underline;
+}
+
+.post-card {
+	margin: 0;
+	display: grid;
+	grid-template-rows: 1fr auto;
+	margin-bottom: 10px;
+	break-inside: avoid;
+	box-shadow: 0 10px 15px -3px rgb(0 0 0 / 10%), 0 4px 6px -4px rgb(0 0 0 / 10%);
+	border-radius: 0.5rem;
+	overflow: hidden;
+}
+
+.post-card>img {
+	max-height: 350px;
+	width: 100%;
+	object-fit: cover;
+}
+
+.post-card-text {
+	padding-left: 18px;
+	padding-right: 18px;
+	padding-bottom: 8px;
+	padding-top: 18px;
+}
+
+.post-card-text>p {
+	margin-top: 8px;
+	font-size: .9rem;
+	line-height: initial;
+}
+
+.error-container {
+	text-align: center;
+	padding: 35px 0px;
+	margin: 10px 0px;
+	background-color: #f3f3f4;
+	color: black;
+	border-radius: 0.75rem;
+
+}
+
+.error-heading {
+	font-weight: 600;
+	font-size: 1.5rem;
+	//color: #ef4444;
+}

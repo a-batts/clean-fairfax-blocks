@@ -1,0 +1,64 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-cleanfairfax-recycling-instructions {
+	background-color: #f3f3f4;
+	border-radius: 0.5rem;
+	margin: 1rem 0;
+	padding: 25px 22px 20px;
+
+	input {
+		width: 100%;
+		margin-top: 10px;
+		margin-bottom: 14px;
+	}
+
+	label {
+		color: black;
+		font-weight: 500;
+		font-size: 13px;
+	}
+
+	header {
+		color: black;
+		font-size: 1.2rem;
+		margin-bottom: 0.5rem;
+		font-weight: bold;
+	}
+
+	.item {
+		display: flex;
+		align-items: center;
+
+		.details {
+			flex-grow: 1;
+			padding: 0.5rem 0;
+
+			h4 {
+				margin: 0;
+				font-weight: 500;
+			}
+
+			p {
+				font-size: 0.9em;
+			}
+		}
+
+		.delete {
+		}
+	}
+
+	.new-item {
+		padding: 0.5rem 0;
+		margin-top: 1rem;
+	}
+
+	.items-header {
+		padding: 0.5rem 0;
+		font-weight: 600;
+		font-size: 0.9em;
+	}
+}
