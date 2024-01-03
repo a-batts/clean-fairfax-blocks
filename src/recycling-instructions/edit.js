@@ -88,25 +88,26 @@ export default function Edit(props) {
 				</div>
 			))}
 
-			{addingNew && (
-				<div>
-					<label>{__("Item", "category-posts-plugin")}</label>
-					<TextControl
-						onChange={(newval) => setNewItem({ ...newItem, name: newval })}
-						value={newItem.name}
-					/>
-					<label>
-						{__("Instructions on how to recycle", "category-posts-plugin")}
-					</label>
-					<TextareaControl
-						onChange={(newval) =>
-							setNewItem({ ...newItem, description: newval })
-						}
-						value={newItem.description}
-					/>
-				</div>
-			)}
 			<div className="new-item">
+				{addingNew && (
+					<div>
+						<label>{__("Item", "category-posts-plugin")}</label>
+						<TextControl
+							onChange={(newval) => setNewItem({ ...newItem, name: newval })}
+							value={newItem.name}
+						/>
+						<label>
+							{__("Instructions on how to recycle", "category-posts-plugin")}
+						</label>
+						<TextareaControl
+							onChange={(newval) =>
+								setNewItem({ ...newItem, description: newval })
+							}
+							value={newItem.description}
+						/>
+					</div>
+				)}
+
 				{addingNew ? (
 					<Button
 						variant="secondary"
